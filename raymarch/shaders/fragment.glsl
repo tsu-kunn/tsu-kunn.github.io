@@ -81,25 +81,24 @@ float distanceFunc(vec3 p) {
     vec3 q1 = rotate(p, radians(u_time * 50.0), vec3(0.0, 1.0, 0.0));
     vec3 q2 = rotate(p + vec3(0.0, -1.5, 0.0), radians(u_time * 50.0), vec3(1.0, 0.0, -1.0));
 
-    float d[6];
+    float d0 = distanceTorus(q2);
+    float d1 = distanceFloor(p);
+    float d2 = distanceBox(q2);
+    float d3 = distanceSphere(q1 + vec3(3.0, -0.5, 0.0));
+    float d4 = distanceCylinder(q2, vec2(0.2, 2.25));
+    float d5 = distanceSphere(q1 + vec3(-3.0, -0.5, 0.0));
+
     float dmin = 1.0;
-    int sno[6];
 
-    d[0] = distanceTorus(q2);
-    d[1] = distanceFloor(p);
-    d[2] = distanceBox(q2);
-    d[3] = distanceSphere(q1 + vec3(3.0, -0.5, 0.0));
-    d[4] = distanceCylinder(q2, vec2(0.2, 2.25));
-    d[5] = distanceSphere(q1 + vec3(-3.0, -0.5, 0.0));
+    dmin = min(d1, min(d0, min(d2, d4)));
+    dmin = min(dmin, min(d3, d5));
 
-    sno[0] = sno[1] = sno[2] = sno[4] = 0;
-    sno[3] = 1;
-    sno[5] = 2;
-
-    for (int i = 0; i < 6; i++) {
-        if (d[i] < dmin) {
-            dmin = d[i];
-            if (bFlg) sphereNo = sno[i];
+    if (bFlg) {
+        sphereNo = 0;
+        if (d3 == dmin) {
+            sphereNo = 1;
+        } else if (d5 == dmin) {
+            sphereNo = 2;
         }
     }
 
