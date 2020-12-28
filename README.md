@@ -6,7 +6,7 @@
 HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。  
 
 ## テストページ
-- sepia
+- https://tsu-kunn.github.io/sepia/
   - セピア調表示
-- raymarch
+- https://tsu-kunn.github.io/raymarch/
   - レイマーチングの勉強
