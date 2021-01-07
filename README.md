@@ -22,8 +22,10 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
 ## テストページ
 - https://tsu-kunn.github.io/sepia/
   - セピア調表示
-- https://tsu-kunn.github.io/raymarch/
-  - レイマーチングの勉強
+- https://tsu-kunn.github.io/raymarch2/
+  - レイマーチングの勉強2
+- https://tsu-kunn.github.io/raymarch3/
+  - レイマーチングの勉強3
 
 ## 作業環境
 - Windows10

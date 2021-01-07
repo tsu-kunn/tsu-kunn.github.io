@@ -16,9 +16,6 @@ const vec3 lightDir = vec3(-0.577, 0.577, 0.577); // ライトの位置
 const float angle = 60.0;
 const float fov = angle * 0.5 * PI / 180.0;
 
-float sphereNo = 0.0;
-bool bFlg = false;
-
 // fog
 const float fogMax = 15.0;
 const float fogMin = 1.0;
@@ -90,16 +87,32 @@ float distanceFunc(vec3 p) {
 
     float min0 = min(d0, min(d2, d4));
     float min1 = min(d1, min0);
-    float min2 = min(min1, min(d3, d5));
     float dst = smoothMin(min1, min(d3, d5), 8.0);
 
-    if (bFlg) {
-        sphereNo = mix(0.0, 1.0, step(d3, min2));
-        sphereNo = mix(sphereNo, 2.0, step(d5, min2));
-        sphereNo = mix(sphereNo, 3.0, step(min0, min2));
-    }
-
     return dst;
+}
+
+float distanceColor(vec3 p) {
+    vec3 q1 = rotate(p, radians(u_time * 50.0), vec3(0.0, 1.0, 0.0));
+    vec3 q2 = rotate(p + vec3(0.0, -1.5, 0.0), radians(u_time * 50.0), vec3(1.0, 0.0, -1.0));
+
+    float d0 = distanceTorus(q2);
+    float d1 = distanceFloor(p);
+    float d2 = distanceBox(q2);
+    float d3 = distanceSphere(q1 + vec3(3.0 - sin(u_time) * 3.0, -0.5, 0.0));
+    float d4 = distanceCylinder(q2, vec2(0.2, 2.25));
+    float d5 = distanceSphere(q1 + vec3(-3.0 + sin(u_time) * 3.0, -0.5, 0.0));
+
+    float min0 = min(d0, min(d2, d4));
+    float min1 = min(d1, min0);
+    float min2 = min(min1, min(d3, d5));
+
+    float sphereNo = 0.0;
+    sphereNo = mix(0.0, 1.0, step(d3, min2));
+    sphereNo = mix(sphereNo, 2.0, step(d5, min2));
+    sphereNo = mix(sphereNo, 3.0, step(min0, min2));
+
+    return sphereNo;
 }
 
 vec3 getNormal(vec3 p) {
@@ -152,14 +165,12 @@ void main() {
     float rLen = 0.0;   // レイに継ぎ足す長さ
     vec3  rPos = cPos;  // レイの先端位置
 
-    bFlg = true;
     for (int i = 0; i < 64; i++) {
         dist = distanceFunc(rPos);
         if (dist < 0.001) break;
         rLen += dist;
         rPos = cPos + ray * rLen;
     }
-    bFlg = false;
 
     // light offset
     vec3 lp = lightDir;
@@ -184,6 +195,7 @@ void main() {
         shadow = genShadow(rPos + normal * 0.001, lp);
 
         // UV or color
+        float sphereNo = distanceColor(rPos);
         if (sphereNo > 0.0) {
             color = mix(color, vec3(0.1, 0.3, 0.7), step(1.0, sphereNo));
             color = mix(color, vec3(0.7, 0.2, 0.1), step(2.0, sphereNo));
