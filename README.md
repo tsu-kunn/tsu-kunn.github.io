@@ -4,6 +4,7 @@
 何を公開するかは検討中…。  
 
 HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。  
+…と思いつつ、レイマーチングやC11に手を出してる。
 
 ## Profile
 - GitHub
@@ -18,6 +19,8 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
   - TGAファイルの読み書き(C++/C#)
 - GLSL
   - シェーダーの勉強結果リポジトリ(VSCode + glsl_canvas)
+- blankcut
+  -  C11の勉強を兼ねて、昔作ったツールをLinuxに移植するリポジトリ
 
 ## テストページ
 - https://tsu-kunn.github.io/sepia/
@@ -37,3 +40,8 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
 - Terminal
   - Git Bash/PowerShell(Windows)
   - Bash(Chromebook)
+- Build
+  - Debian GNU/Linux 10.8
+  - gcc version 8.3.0 (Debian 8.3.0-6) 
+  - GNU Make 4.2.1
+  
