@@ -16,11 +16,14 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
 
 ## リポジトリ
 - TGA
+  - https://github.com/tsu-kunn/GLSL
   - TGAファイルの読み書き(C++/C#)
 - GLSL
+  - https://github.com/tsu-kunn/GLSL
   - シェーダーの勉強結果リポジトリ(VSCode + glsl_canvas)
 - blankcut
-  -  C11の勉強を兼ねて、昔作ったツールをLinuxに移植するリポジトリ
+  - https://github.com/tsu-kunn/blankcut
+  - C11の勉強を兼ねて、昔作ったツールをLinuxに移植するリポジトリ
 
 ## テストページ
 - https://tsu-kunn.github.io/sepia/
