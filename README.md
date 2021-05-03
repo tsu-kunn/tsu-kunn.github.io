@@ -13,17 +13,19 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
   - https://twitter.com/tsu_kunn
 - Amazon
   - https://www.amazon.jp/hz/wishlist/ls/36L31WI17G7L3?ref_=wl_share
+- ブクログ
+  - https://booklog.jp/users/melton
 
 ## リポジトリ
 - TGA
   - https://github.com/tsu-kunn/GLSL
-  - TGAファイルの読み書き(C++/C#)
+  - TGAファイルの読み書き(C99/C++/C#)
 - GLSL
   - https://github.com/tsu-kunn/GLSL
   - シェーダーの勉強結果リポジトリ(VSCode + glsl_canvas)
 - blankcut
   - https://github.com/tsu-kunn/blankcut
-  - C11の勉強を兼ねて、昔作ったツールをLinuxに移植するリポジトリ
+  - C99/11の勉強を兼ねて、昔作ったツールをLinuxに移植するリポジトリ
 
 ## テストページ
 - https://tsu-kunn.github.io/sepia/
@@ -39,11 +41,11 @@ HTML5 + CSS3 + JavaScriptぐらいは扱えるようになりたい。
 - Chromebook
   - Lenovo IdeaPad Duet Chromebook
 - Editor
-  - VSCode + glsl-canvas
+  - VSCode + glsl-canvas + C/C++
 - Terminal
   - Git Bash/PowerShell(Windows)
   - Bash(Chromebook)
-- Build
+- Build(Chromebook for Linux)
   - Debian GNU/Linux 10.8
   - gcc version 8.3.0 (Debian 8.3.0-6) 
   - GNU Make 4.2.1
