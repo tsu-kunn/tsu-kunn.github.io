@@ -61,6 +61,16 @@ normal **bold** normal
 
 normal ***bold*** normal
 
+## リンク
+[GitHubマイページ](https://github.com/tsu-kunn)
+
+## リンク参照
+何回も同じリンクを記述する場合などに使用する。  
+[リンク1][GitHub]  
+[リンク2][GitHub]
+
+[GitHub]: https://github.com/
+
 
 # GitHub Flavored Markdown(GFM)
 GitHubの独自仕様のMarkdown記法。  
