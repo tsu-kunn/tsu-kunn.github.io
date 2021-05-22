@@ -32,3 +32,29 @@ p {
     margin: 0 5px 5px 0;
     padding: 10px 0 0 10px;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+}
+
+.item {
+    background: #0bd;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+}
+
+.item2 {
+    background: #92cb97;
+    color: #f6f0cc;
+    padding: 10px;
+}
