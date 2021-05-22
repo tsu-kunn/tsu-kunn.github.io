@@ -1,16 +1,26 @@
 @charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
 body {
-    background-color: #fffeee;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url(pict/W_05.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-color: rgba(255, 255, 255, 0.75);
     background-blend-mode: lighten;
+    line-height: 1.7;
 }
 
-html {
-    font-size: 100%;
+a {
+    text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+}
+
 h1 {
     color: #0bd;
     font-size: 2rem;
@@ -24,13 +34,54 @@ h2 {
 }
 
 p {
-    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Sawarabi Gothic', sans-serif;
     line-height: 1.7;
     text-align: justify;
     width: 80%;
     height: 90%;
     margin: 0 5px 5px 0;
     padding: 10px 0 0 10px;
+}
+
+.header {
+    font-family: 'Hachi Maru Pop', cursive;
+    color: #8490c8;
+}
+
+.page_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.main_nav {
+    display: flex;
+    font-size: 0.75
+    rem;
+    text-transform: uppercase;
+    margin-top: 32px;
+    list-style: none;
+}
+
+.main_nav li {
+    margin-left: 16px;
+}
+
+.main_nav a {
+    color: #432;
+}
+
+.main_nav a:hover {
+    color: #0bd;
+}
+
+.main_nav .icon {
+    width: 32px;
 }
 
 .container {
