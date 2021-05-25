@@ -21,28 +21,7 @@ img {
     max-width: 100%;
 }
 
-h1 {
-    color: #0bd;
-    font-size: 2rem;
-    font-family: serif;
-}
-
-h2 {
-    font-size: 20px;
-    font-family: 'Noto Sans JP', sans-serif;
-    border-bottom: 2px solid #0bd;
-}
-
-p {
-    font-family: 'Sawarabi Gothic', sans-serif;
-    line-height: 1.7;
-    text-align: justify;
-    width: 80%;
-    height: 90%;
-    margin: 0 5px 5px 0;
-    padding: 10px 0 0 10px;
-}
-
+/* ヘッダー部 */
 .header {
     font-family: 'Hachi Maru Pop', cursive;
     color: #8490c8;
@@ -84,28 +63,52 @@ p {
     width: 32px;
 }
 
-.container {
+/* メイン部 */
+.news-contents {
     display: flex;
-    flex-wrap: wrap;
-    width: 35%;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
-.item {
-    background: #0bd;
-    color: #fff;
-    margin: 10px;
-    padding: 10px;
+article {
+    width: 74%;
 }
 
-.container2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    gap: 10px;
+article h1 {
+    color: #0bd;
+    font-size: 2rem;
+    font-family: serif;
 }
 
-.item2 {
-    background: #92cb97;
-    color: #f6f0cc;
-    padding: 10px;
+article h2 {
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-bottom: 2px solid #0bd;
+}
+
+article p {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    line-height: 1.7;
+    text-align: justify;
+    width: 80%;
+    height: 90%;
+    margin: 0 5px 5px 0;
+    padding: 10px 0 0 10px;
+}
+
+/* サイドバー部 */
+aside {
+    width: 22%;
+}
+
+/* フッター部 */
+footer {
+    /* background: #432; */
+    text-align: center;
+    padding: 26px 0;
+}
+
+footer p {
+    color: #0bd;
+    font-size: 0.875rem;
 }
