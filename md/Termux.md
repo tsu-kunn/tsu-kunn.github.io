@@ -18,9 +18,9 @@ Termux 0.101 では100MB近くのパッケージ更新がある。
 $ apt install -y vim git openssh
 ```
 
-エディターとしてVimを使い、ソース管理としてGitを利用する。\
-Vimeは操作を覚えるまで使いにくいが、ワンキーでカーソル操作や編集ができるので、ソフトウェアキーボードとの相性がとても良い。\
-Emacsの操作はCtrlとの組み合わせを多用するので、Vimほど快適に使いにくい。
+エディターとしてVimを使い、ソース管理としてGitを利用する。
+Vimeは操作を覚えるまで使いにくいが、ワンキーでカーソル操作や編集ができるので、ソフトウェアキーボードとの相性がとても良い。
+Emacsの操作はCtrlとの組み合わせを多用するので、Vimほど快適に使いにづらい。
 
 GitHubとのやり取りを SSH で行いたいので、 Open SSH も追加する。
 
@@ -76,7 +76,7 @@ storage というディレクトリができ、ここから以下のフォルダ
 - downloads
 - external-1
   - SDカードの "/storage/[SD Card ID]/Android/data/com.termux/files" のリンクとなる。
-  - SDカードのルートや他のディレクトリにはアクセエスできない。
+  - SDカードのルートや他のディレクトリにはアクセスできない。
 - movies
 - music
 - pictures
@@ -141,9 +141,9 @@ $ mkdir ~/.termux
 $ touch ~/.termux/termux.properties
 ```
 
-コメントアウトになっている "extra-keys" から始まる2行のコメントアウトを削除する。
-使いやすいように値を編集する。
+"extra-keys" から始まる2行のコメントアウトを削除し、使いやすいように値を編集する。
 
+例）
 ```
 extra-keys = [['ESC','TAB','-','HOME','UP','END','PGUP','DEL'], \
               ['CTRL','ALT','/','LEFT','DOWN','RIGHT','PGDN',':']]
@@ -156,5 +156,5 @@ $ termux-reload-settings
 
 ## 参考URL
 - [スマフォで始めるWebアプリ開発](https://zenn.dev/endo_hizumi/articles/887826624e04806ed9a2)
-- [Termuxの意外と知らない...](https://qiita.com/gnuhead/items/3734a9dbf1146b59f12d)
+- [Termuxの意外と知らない日本語入力方法、特殊キータブの項目を増やす小技](https://qiita.com/gnuhead/items/3734a9dbf1146b59f12d)
 
