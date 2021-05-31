@@ -6,8 +6,19 @@ Markdown言語の使い方を練習するファイル。
 ## 参考HP
 [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)
 
+[GitHub 基本的な書き方とフォーマットの構文](https://docs.github.com/ja/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
 ### 見出し3
 "#"を増やすことで、見出し6までいけるっぽい。
+
+
+## 改行
+文末にスペースを２つ記載。  
+文末に `\(バックスラッシュ)` を記載いする。\
+ただし複数行にしないと `\` が表示される。
+
+間に１行改行を入れる。
+
 
 ## 箇条書き
 - リスト1
@@ -25,7 +36,7 @@ Markdown言語の使い方を練習するファイル。
     1. 番号付きリスト
 1. 番号付きリスト
 
-番号付きは自動で番号が割り振られるので、数字は何でもよい。
+番号付きは自動で番号が割り振られるので、数字は何でもよい。\
 決まった数字にしておくと入れ替えが便利。
 
 ## 引用
@@ -33,6 +44,10 @@ Markdown言語の使い方を練習するファイル。
 > 
 >> 二重も行ける
 
+
+## インラインコード
+`バッククォート` で挟む。\
+`@` や `#` など Markdown記法 として解釈されないようにもできる。
 
 ## pre記法
     function edit_profile
@@ -89,10 +104,10 @@ int main(int args, char *argc[])
 }
 ~~~
 
-~~~ Python
+``` Python
 if __name__ == "__main__":
     print("Hello world")
-~~~
+```
 
 ## 表
 |header1|header2|header3|
@@ -102,6 +117,23 @@ if __name__ == "__main__":
 |d||f|
 
 結合はできないのかな？
+
+
+## タスクリスト
+- [ ] タスク項目
+- [x] チェックマーク
+
+
+## 絵文字
+[emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+
+`:コード:` で絵文字が表示される :penguin: 
+
+
+## 画像
+![GitHub](https://tsu-kunn.github.io/html/pict/Github_i.png)
+
+サイズ指定はできない。
 
 
 ## 使用例
