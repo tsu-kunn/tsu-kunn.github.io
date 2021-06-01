@@ -110,13 +110,13 @@ article {
     margin: 0 auto;
 }
 
-.sub_title {
+.main_title {
     font-size: 20px;
     font-family: 'Noto Sans JP', sans-serif;
     border-bottom: 2px solid #0bd;
 }
 
-.sub_story {
+.main_story {
     font-family: 'Sawarabi Gothic', sans-serif;
     line-height: 1.7;
     text-align: justify;
@@ -125,6 +125,32 @@ article {
 /* サイドバー部 */
 aside {
     width: 22%;
+}
+
+.sub_title {
+    font-size: 1.15rem;
+    padding: 0 2px 2px;
+    border-bottom: 2px #8490c8 solid;
+    font-weight: normal;
+}
+
+.sub_menu {
+    /* margin-bottom: 10px; */
+    list-style: none;
+}
+
+.sub_menu li {
+    border-bottom: 1px #844221 solid;
+}
+
+.sub_menu a {
+    color: #432;
+    /* padding: 10px; */
+    display: block;
+}
+
+.sub_menu a:hover{
+    color: #0bd;
 }
 
 /* フッター部 */
