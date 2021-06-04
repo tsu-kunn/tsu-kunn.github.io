@@ -153,6 +153,11 @@ aside {
     color: #0bd;
 }
 
+.amazon {
+    display: flex;                                                                                     
+    flex-direction: row;    
+}
+
 /* フッター部 */
 footer {
     /* background: #432; */
