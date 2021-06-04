@@ -124,7 +124,7 @@ article {
 
 /* サイドバー部 */
 aside {
-    width: 22%;
+    width: 33%;
 }
 
 .sub_title {
@@ -153,9 +153,14 @@ aside {
     color: #0bd;
 }
 
+.twitter-timeline {
+    margin-left: 30px;
+}
+
 .amazon {
-    display: flex;                                                                                     
-    flex-direction: row;    
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
 }
 
 /* フッター部 */
