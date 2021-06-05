@@ -174,3 +174,15 @@ footer p {
     color: #0bd;
     font-size: 0.875rem;
 }
+
+
+/* モバイル画面 */
+@media (max-width: 600px) {
+    .news-contents {
+        flex-direction: column;
+    }
+
+    article, aside {
+        width: 100%;
+    }
+}
