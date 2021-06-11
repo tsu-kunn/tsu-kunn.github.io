@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "pwaClock",
+  "name": "Clock application for PWA",
+  "lang": "ja-JP",
+  "description": "Reactで作るPWAの時計アプリ",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +22,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#8490c8",
   "background_color": "#ffffff"
 }
